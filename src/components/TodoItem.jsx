@@ -1,3 +1,5 @@
+import { setTodos } from "../redux/slices/todoSlice";
+
 // Hint: TodoItem 컴포넌트는 props 를 받습니다.
 export default function TodoItem() {
   return (
@@ -16,8 +18,8 @@ export default function TodoItem() {
         <p>내용: 이거슨내용</p>
       </section>
       <section>
-        <button>완료</button>
-        <button>삭제</button>
+        <button onClick={statusToggle}>완료</button>
+        <button onClick={deleteTodo}>삭제</button>
       </section>
     </li>
   );
